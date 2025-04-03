@@ -19,6 +19,7 @@ header {
     font-size: 23px;
     left: 0px;
     right: 0px;
+    height: 4.5em;
 }
 
 .esfera{
@@ -35,7 +36,6 @@ header {
     border: 2px outset #EFCA08;
 }
 .icone{
-    background-image: url(porthon.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -44,13 +44,52 @@ header {
     width: 30px;
     height: 30px;
 }
+.porthon{
+    background-image: url(porthon.png);
+}
+.python{
+    background-image: url(python.png);
+}
 h1#theader{
     margin-top:0em;
     font-size: 2em;
     display: inline-block;
     margin-left: -1.8em;
 }
+nav>ul {
+    list-style-type: none;
+    padding: 0;
+}
+nav>ul>li {
+    display: inline;
+    margin-right: 0.25em;
+    margin-left: 0.25em;
+}
+nav button {
+    background-color: #0028ad;
+    color: white; 
+    border: none;
+    padding: 10px 20px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block; 
+    font-size: 16px; 
+    border-radius: 5px;
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+    font-weight: bolder;
+    margin-top: 2.2em;
+    transform: translateX(-16.5em);
+}
 
+
+nav button:hover {
+    background-color: #c26e00; 
+}
+
+.menu{
+    position: sticky;
+}
 
 main {
     margin: 8em 0 6.5em 0 ;
