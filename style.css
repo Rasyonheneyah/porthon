@@ -21,26 +21,67 @@ header {
     right: 0px;
 }
 
-main {
-    margin: 6.5em 0 6.5em 0 ;
+.esfera{
+    background-color: #1789fc00;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-top: 0.30em;
+    width: 40px;
+    height: 40px;
+    color: rgba(255, 255, 255, 0);
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+    border: 2px outset #EFCA08;
 }
+.icone{
+    background-image: url(porthon.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+}
+h1#theader{
+    margin-top:0em;
+    font-size: 2em;
+    display: inline-block;
+    margin-left: -1.8em;
+}
+
+
+main {
+    margin: 8em 0 6.5em 0 ;
+    padding-bottom: 1em;
+}
+
 
 h1{
     color: #F08700;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.534);
-    text-indent: 0.5em;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-indent: 2em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 3.5em;
+    font-weight: bold;
 }
 
 h2{
     font-size: 3.0em;
+    color: #F08700;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.534);
+    text-indent: 0.5em;
 }
 
-p{
+main>p{
     text-indent: 3em;
-    padding-left: 0.5em;
+    padding-left: 1em;
     text-align: justify;
+    padding-right: 1em;
+}
+.linksite{
+    text-decoration:none ;
 }
 
 code{
@@ -55,18 +96,34 @@ code{
 
 }
 
-footer {
+footer{
     background-color: #EFCA08;
     min-height: 3.0em;
     padding: 0 100% 0 0;
     box-shadow: -1px -2.5px 15px #838383a2;
-    bottom: 0;
+    bottom: auto;
     width: 100%;
     font-size: 23px;
     left: 0px;
     right: 0px;
-    margin: 1.5em 0 0 0;
+    margin: auto;
     position: absolute;
-    position: fixed;
+    box-sizing: content-box;
+    color: #1789FC;
 }
-
+.circular{
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    margin-top: 0;
+}
+footer>p{
+    padding-top: 1em ;
+    transform: translatey(-1em);
+    margin: 0;
+}
+footer>a{
+    text-decoration: none;
+    color: #1789FC;
+}
