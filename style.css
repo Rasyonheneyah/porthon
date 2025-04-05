@@ -1,174 +1,294 @@
 @charset "UTF-8";
+
+/* --- Fontes personalizadas --- */
 @font-face {
-    font-family:'Gameplay' ;
+    font-family: 'Gameplay';
     src: url(fontes/Gameplay.ttf);
 }
 
+/* --- Corpo da página --- */
+/** Espaço para o header fixo */
 body {
     background-color: #FFFFFF;
     font-family: Arial, Helvetica, sans-serif;
-    overflow-wrap:break-word ;
+    overflow-wrap: break-word;
+    padding-top: 17vh;
 }
 
+/* --- Cabeçalho fixo --- */
 header {
     background-color: #1789FC;
-    min-height: 3.0em;
-    padding: 0 0 0 0;
     box-shadow: 1px 2.5px 15px #838383a2;
-    box-sizing: content-box;
+    box-sizing: border-box;
     display: flex;
-    top: 0;
+    align-items: center;
+    justify-content: space-between; /* Espaço entre marca e menu */
+    padding: 0 2vw;
     width: 100%;
     position: fixed;
     font-size: 23px;
-    left: 0px;
-    right: 0px;
     height: 17vh;
+    top: 0;
+    left: 0;
+    z-index: 10;
 }
 
-.esfera{
-    background-color: #1789fc00;
-    border-radius: 50%;
-    margin-left: 10px;
-    margin-top: 0.30em;
-    width: 7vh;
-    height: 7vh;
-    color: rgba(255, 255, 255, 0);
-    display: flex ;
+/* --- Branding --- */
+.brand {
+    display: flex;
     align-items: center;
-    justify-content: center;
-    border: 2px outset #EFCA08;
+    gap: 1em;
 }
-.icone{
+
+/** PEGA SOMENTE QM TEM O ICONE E PORTHON AO MESMO TEMPO */
+.icone.porthon {
+    background-image: url('porthon.png'); 
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    width: 7vh;
+    height: 7vh;
     display: block;
-    position: relative;
-    width: 5.5vh;
-    height: 5.5vh;
+    border-radius: 50%;
+    cursor: pointer;
 }
-.porthon{
-    background-image: url(porthon.png);
-}
-.python{
-    background-image: url(python.png);
-}
-h1#theader{
-    margin-top:1vh;
-    font-size: 6vh;
+
+/* --- Título no cabeçalho --- */
+h1#theader {
+    margin-top: 1vh;
+    font-size: 6.5vh;
     display: inline-block;
     margin-left: -1.8em;
     font-family: 'Gameplay';
     text-shadow: 2px 2px 5px #0028ad8a;
 }
-nav>ul {
-    list-style-type: none;
+
+/* --- Menu de navegação --- */
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+/* Container de navegação */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Itens da lista no nav */
+nav > ul {
+    display: flex;
+    gap: 1.5vw;
+    list-style: none; /* remov bolinhas */
     padding: 0;
+    margin: 0;
 }
-nav>ul>li {
-    display: inline;
-    margin-left: 0.25em;
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
-nav button {
-    background-color: #0028ad;
-    color: white; 
-    border: none;
-    padding: 10px 20px; 
-    text-align: center; 
-    text-decoration: none; 
-    display: inline-block; 
-    font-size: 2.5vh; 
+  
+
+nav li {
+    margin: 0 0.5em;
+}
+
+/* --- Botões gerais --- */
+.botao-nav, .submenu-item {
+    padding: 10px;
     border-radius: 5px;
-    cursor: pointer; 
-    transition: background-color 0.3s; 
-    font-weight: bolder;
-    margin-top: 2.2em;
-    transform: translateX(-18vw);
+    font-size: 2.5vh;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.botao-nav {
+    background-color: #0028ad;
+    color: white;
     box-shadow: 1px 1px 3px #00155c8a;
 }
 
-
-nav>button:hover {
-    background-color: #c26e00; 
+.botao-nav:hover, .botao-nav:focus {
+    background-color: #c26e00;
+    outline: none;
 }
 
-.menu{
-    position: sticky;
+/* --- Dropdown --- */
+.dropdown {
+    position: relative;
 }
 
+/** Esconde submenu por padrão */
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #1789FC;
+    border-radius: 8px;
+    padding: 0.5em;
+    top: 100%;
+    left: 0;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    flex-direction: column;
+    min-width: 160px;
+}
+
+.dropdown:hover .submenu {
+    display: flex;
+}
+
+/* --- Submenu específico para Python --- */
+/** Caminho do seu ícone */
+.submenu-item.python {
+    background-color: #0028ad;
+    background-image: url('python.png');
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 24px 24px;
+    padding-left: 40px; 
+    color: white;
+    font-size: 2vh;
+}
+
+.submenu-item.python:hover {
+    background-color: #c26e00;
+}
+
+/* --- Botão hamburguer --- */
+/** Esconder o botão p/não-mobile */
+.hamburguer {
+    display: none;
+    background: none;              /* Remov fundo padrão bom p/ botões */
+    border: none;                  /* Remove borda padrão do botão */
+    font-size: 2em;                /* Tam G p/ icon do hamburguer */
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .hamburguer {
+        display: block;                /* Agora o botão aparece */
+        position: absolute;           /* Posicionamento independe doutros elementos */
+        top: 1.5vh;                    
+        right: 1em;                    
+        z-index: 1000;                /* sobrepõe todos elementos */
+    }
+
+    /** aparecer ao clicar */
+    .nav-principal ul {
+        display: none;
+        flex-direction: column;      /* itens empilhados*/
+        background-color: #1789FC;  
+        position: absolute;          
+        top: 100%;                   
+        right: 1em;                  
+        border-radius: 10px;         
+        padding: 1em;                
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); 
+        z-index: 999;                /* sobrepor elementos */
+    }
+
+    .nav-principal ul.show {
+        display: flex; /*menu visivel qnd .show for ativada*/
+    }
+
+    .botao-nav {
+        font-size: 2vh;
+        white-space: nowrap; /* texto n quebra duas linhas */
+    }
+}
+
+/* --- Conteúdo principal --- */
 main {
-    margin: 19vh 0 6.5em 0 ;
+    margin: 0 0 6.5em 0;
     padding-bottom: 1em;
 }
 
-
-h1{
-    color: #F08700;
+h1, h2, h3 {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.534);
-    text-indent: 2em;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 3.5em;
+    margin: 0;
     font-weight: bold;
 }
 
-h2{
-    font-size: 3.0em;
+h1 {
     color: #F08700;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.534);
+    text-indent: 2em;
+    font-size: 4em;
+    font-family: 'Lucida Sans', sans-serif;
+}
+
+h2 {
+    font-size: 3em;
+    color: #0028ad;
     text-indent: 0.5em;
 }
 
-main>p{
-    text-indent: 3em;
-    padding-left: 1em;
-    text-align: justify;
-    padding-right: 1em;
-}
-.linksite{
-    text-decoration:none ;
+h3 {
+    font-size: 2.5em;
+    color: #1789FC;
+    text-indent: 0.6em;
 }
 
-code{
+main > p {
+    text-indent: 3em;
+    padding: 0 1em;
+    text-align: justify;
+}
+
+.linksite {
+    text-decoration: none;
+}
+
+/* --- Código --- */
+code {
     background-color: #5D675B;
     color: #FFFFFF;
     border-radius: 5px;
-    padding: 1em 35em 1em 1em;
-    width: fit-content;
-    margin: 3em 1em 1em 2em;
-    border: 1.5px solid rgb(0, 0, 0);
-    box-shadow: inset -2.5px -1.5px 3px rgba(255, 255, 255, 0.514);
-
+    padding: 1em;
+    margin: 2em;
+    overflow-x: auto;
+    font-family: 'Courier New', monospace;
+    display: block;
+    max-width: 100%;
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.2);
+    font-weight: bold;
 }
 
-footer{
+/* --- Rodapé --- */
+footer {
     background-color: #EFCA08;
-    min-height: 3.0em;
-    padding: 0 100% 0 0;
+    min-height: 3vh;
     box-shadow: -1px -2.5px 15px #838383a2;
-    bottom: auto;
     width: 100%;
     font-size: 1.8em;
-    left: 0px;
-    right: 0px;
-    margin: auto;
     position: absolute;
+    margin: auto;
     box-sizing: content-box;
     color: #1789FC;
+    left: 0;
+    right: 0;
 }
-.circular{
+
+footer > p {
+    padding-top: 1em;
+    transform: translateY(-1em);
+    margin: 0;
+}
+
+footer > a {
+    text-decoration: none;
+    color: #1789FC;
+}
+
+/* Ícones sociais */
+.circular {
     border-radius: 50%;
     width: 35px;
     height: 35px;
     margin-right: 10px;
-    margin-top: 0;
-}
-footer>p{
-    padding-top: 1em ;
-    transform: translatey(-1em);
-    margin: 0;
-}
-footer>a{
-    text-decoration: none;
-    color: #1789FC;
 }

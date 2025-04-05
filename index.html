@@ -11,32 +11,47 @@
 <body>
 
     <header>
-        <div class="esfera">
-            <div class="icone porthon"> <a target="_blank" rel="external" href="https://github.com/Rasyonheneyah"></a></div>
+        <div class="brand">
+          <span class="icone porthon"></span> 
+          <h1 id="theader">Porthon</h1>
         </div>
-        <h1 id="theader">Porthon</h1>
-        <div class="linha-separadora"></div>
+      
         <div class="menu">
-            <nav>
-                <ul>
-                    <li><a href="index.html"><button>Página Inicial</button></a></li>
-                    <li><a href="#sobre"><button>Linguagens</button></a></li>
-                    <li><a href="#contato"><button>Contato</button></a></li>
-                </ul>    
-            </nav>
+          <button class="hamburguer" onclick="toggleMenu()">☰</button>  
+          <nav class="nav-principal">
+            <ul>
+              <li><a class="botao-nav" href="index.html">Página Inicial</a></li>
+              <li class="dropdown">
+                <a class="botao-nav" href="#">Linguagens ▾</a>
+                <ul class="submenu">
+                  <li>
+                    <a class="botao-nav submenu-item python" href="python.html">Python</a>
+                  </li>
+                </ul>
+              </li>
+              <li><a class="botao-nav" href="#contato">Contato</a></li>
+            </ul>    
+          </nav>
         </div>
+      </header> 
 
-    </header>
-
-    <main>
-            <h1>O que é o Porthon?</h1>
-            <p> O Porthon é um projeto voltado para programadores iniciantes, com o propósito de esclarecer se o Portugol é uma ferramenta eficiente para o aprendizado de programação. A iniciativa apresenta argumentos e razões que destacam os benefícios de utilizar Portugol como um primeiro passo na jornada da programação. O nome Porthon nasce da fusão entre Portugol e Python, refletindo a proposta do projeto de demonstrar que por meio da aprendizagem significativa e outros fatores, o Portugol pode ser utilizado como um aliado poderoso na jornada de aprendizado de Linguagens de Programação. Python será a primeira das linguagens explorada no site, Porthon busca mostrar como ambos podem ser aprendidos em conjunto, tornando a compreensão da lógica de programação mais acessível e intuitiva. Apesar de algumas opiniões divergentes sobre o uso do Portugol, o Porthon busca mostrar que essa ferramenta pode ser um excelente recurso para quem deseja desenvolver uma base sólida antes de avançar para linguagens mais complexas.</p>
-            <p>Embora existam poucas diferenças entre as variações do Portugol estruturado, o Porthon adota como base o modelo utilizado no aplicativo gratuito <a class="linksite" rel="external" target="_blank" href="https://sourceforge.net/projects/visualg30/">Visualg</a> para o Portugol. Além disso, para a escrita de código tanto em Python quanto outras linguagens de programação, o editor de texto recomendado será o <a class="linksite" rel="external" lang="en" target="_blank" href="https://code.visualstudio.com/download">Visual Studio Code</a>, uma ferramenta robusta e versátil que oferece recursos avançados para o desenvolvimento e facilita a transição entre diferentes linguagens de programação.</p>
-
-        <code>aba
-             
-             aba
-        </code>
+    <main>  
+            
+                    <h1>O Diálogo entre o Portugol e o Cérebro do Programador Iniciante</h1>
+                    <h2>O que é o Porthon?</h2>
+                    <p> O Porthon é um projeto voltado para programadores iniciantes, com o propósito de esclarecer se o Portugol é uma ferramenta eficiente para o aprendizado de programação. A iniciativa apresenta argumentos e razões que destacam os benefícios de utilizar Portugol como um primeiro passo na jornada da programação. O nome Porthon nasce da fusão entre Portugol e Python, refletindo a proposta do projeto de demonstrar que por meio da aprendizagem significativa e outros fatores, o Portugol pode ser utilizado como um aliado poderoso na jornada de aprendizado de Linguagens de Programação. Python será a primeira das linguagens explorada no site, Porthon busca mostrar como ambos podem ser aprendidos em conjunto, tornando a compreensão da lógica de programação mais acessível e intuitiva. Apesar de algumas opiniões divergentes sobre o uso do Portugol, o Porthon busca mostrar que essa ferramenta pode ser um excelente recurso para quem deseja desenvolver uma base sólida antes de avançar para linguagens mais complexas. Embora existam poucas diferenças entre as variações do Portugol estruturado, o Porthon adota como base o modelo utilizado no aplicativo gratuito <a class="linksite" rel="external" target="_blank" href="https://sourceforge.net/projects/visualg30/">Visualg</a> para o Portugol. Além disso, para a escrita de código tanto em Python quanto outras linguagens de programação, o editor de texto recomendado será o <a class="linksite" rel="external" lang="en" target="_blank" href="https://code.visualstudio.com/download">Visual Studio Code</a>, uma ferramenta robusta e versátil que oferece recursos avançados para o desenvolvimento e facilita a transição entre diferentes linguagens de programação.</p>
+                        <h2>Portugol e o Cérebro</h2>
+                        <h3>Introdução</h3>
+                    <p>A programação tem sido, há muito tempo, uma poderosa ferramenta para a otimização de tarefas. Responsável por inúmeros avanços da nossa sociedade, ela foi criada e aprimorada por verdadeiros gênios da história, dada a sua complexidade. No entanto, essa característica leva muitas pessoas a acreditarem que não têm habilidade suficiente para aprender, desistindo logo no início de sua jornada. Isso, porém, não é verdade, pois existem diversos caminhos que tornam o aprendizado mais acessível.
+                    Um ótimo exemplo é o Portugol, uma linguagem que utiliza o português como base para sua estrutura. Isso facilita a compreensão dos comandos presentes nas linguagens de programação, já que há muitas semelhanças entre elas. Esses pontos em comum, entre outros fatores, favorecem uma comunicação mais eficaz por meio do chamado "Português Estruturado" no cérebro, promovendo uma aprendizagem significativa. Por isso, neste site, exploraremos mais profundamente a relação entre a mente humana e a programação, realizando comparações entre o Portugol e outras linguagens de programação — inicialmente o Python — e analisando como a aprendizagem significativa contribui nesse processo.</p>
+            <pre>
+                <code>
+                    for i in range(5):
+                        a=input('Insira:')
+                        a=a+a
+                </code>
+            </pre>
+        
     </main>
 
     <footer>
@@ -47,6 +62,6 @@
             </div>
         
     </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>
