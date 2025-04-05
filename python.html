@@ -1,14 +1,64 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Porthon: Python / Portugol</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="porthon.ico">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Porthon | Python</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="porthon.png" />
+  <script src="script.js" defer></script>
 </head>
+
 <body>
-    
+  <header>
+    <div class="brand">
+      <span class="icone porthon" title="Logo Porthon"></span>
+      <h1 id="theader">Porthon <span class="subh1">. Python()</span></h1>
+    </div>
+
+    <div class="menu">
+      <button class="hamburguer" onclick="toggleMenu()">☰</button>
+      <nav class="nav-principal">
+        <ul>
+          <li><a class="botao-nav" href="index.html">Início</a></li>
+          <li class="dropdown">
+            <a class="botao-nav" href="#">Conteúdo</a>
+            <div class="submenu">
+              <a class="submenu-item python" href="python.html">Python</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>Introdução ao Python</h1>
+    <p>
+      Python é uma linguagem de programação de alto nível, fácil de aprender e extremamente poderosa. 
+      Com uma sintaxe limpa e uma vasta gama de bibliotecas, é ideal tanto para iniciantes quanto para profissionais.
+    </p>
+
+    <h2>Por que aprender Python?</h2>
+    <ul>
+      <li>É fácil de entender e escrever</li>
+      <li>É usada em áreas como ciência de dados, inteligência artificial, automação e web</li>
+      <li>Tem uma comunidade gigantesca</li>
+    </ul>
+
+    <h2>Exemplo de código:</h2>
+    <code>
+      print("Olá, mundo!")
+    </code>
+  </main>
+
+    <footer>
+        
+    <div style="display: flex; justify-content: center; align-items: center; height: 10em;">
+        <a target="_blank" rel="external" href="https://github.com/Rasyonheneyah"><img class="circular" src="autor.png" alt="Ícone do autor"></a>
+        <p> Site construído pelo Misael</p>
+    </div>
+
+    </footer>
 </body>
 </html>
