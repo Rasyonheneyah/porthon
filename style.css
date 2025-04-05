@@ -92,7 +92,7 @@ nav>button:hover {
 }
 
 main {
-    margin: 8em 0 6.5em 0 ;
+    margin: 19vh 0 6.5em 0 ;
     padding-bottom: 1em;
 }
 
@@ -142,7 +142,7 @@ footer{
     box-shadow: -1px -2.5px 15px #838383a2;
     bottom: auto;
     width: 100%;
-    font-size: 23px;
+    font-size: 1.8em;
     left: 0px;
     right: 0px;
     margin: auto;
