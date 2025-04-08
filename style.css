@@ -171,15 +171,20 @@ nav li {
     font-size: 2em;                /* Tam G p/ icon do hamburguer */
     color: white;
     cursor: pointer;
+    
 }
 
 @media (max-width: 768px) {
     .hamburguer {
-        display: block;                /* Agora o botão aparece */
-        position: absolute;           /* Posicionamento independe doutros elementos */
+        display: block;               
         top: 1.5vh;                    
         right: 1em;                    
-        z-index: 1000;                /* sobrepõe todos elementos */
+        z-index: 1000;                
+        position: fixed;
+        top: 1vh;
+        right: 1em;
+        z-index: 1000;
+        
     }
 
     /** aparecer ao clicar */
@@ -247,6 +252,38 @@ main > p {
     text-decoration: none;
 }
 
+/* --- Imagens ---*/
+.imagem-container {
+    text-align: center;
+    margin: 2em auto;
+    padding: 1em;
+    max-width: 300px; 
+    border-radius: 20px;
+    background-color: #f3f3f3;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    border: 2px solid #1789FC;
+}
+
+.imagem-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid #c26e00;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imagem-container img:hover {
+    transform: scale(1.05);
+    box-shadow: 5px 5px 20px rgba(0, 40, 173, 0.4);
+}
+
+.imagem-container p {
+    margin-top: 0.8em;
+    color: #0028ad;
+    font-style: italic;
+    font-size: 1em;
+}
+
 /* --- Código --- */
 code {
     background-color: #5D675B;
@@ -260,6 +297,7 @@ code {
     max-width: 100%;
     box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.2);
     font-weight: bold;
+    font-size: 20px;
 }
 
 /* --- Rodapé --- */
