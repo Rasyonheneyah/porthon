@@ -39,6 +39,19 @@ header {
     align-items: center;
     gap: 1em;
 }
+/*---Icones do menu---*/
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 300,
+  'GRAD' 0,
+  'opsz' 24
+}
+.botao-nav.material-symbols-outlined {
+    vertical-align: middle;
+    margin-right: 0.3em; 
+}
+  
 
 /** PEGA SOMENTE QM TEM O ICONE E PORTHON AO MESMO TEMPO */
 .icone.porthon {
@@ -114,6 +127,9 @@ nav li {
     background-color: #0028ad;
     color: white;
     box-shadow: 1px 1px 3px #00155c8a;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3em; 
 }
 
 .botao-nav:hover, .botao-nav:focus {
