@@ -50,3 +50,37 @@
         font-size: 4.5vh;
     }
 }
+input, button {
+    font-size: 1.2em;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+}
+
+input {
+    width: 200px;
+    background-color: #333;
+    color: #F08700;
+    text-align: center;
+    font-weight: 700;
+}
+
+button {
+    background-color: #0028ad;
+    color: #F08700;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #001763;
+}
+
+  #resultado {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+

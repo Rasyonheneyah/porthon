@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="mediapython.css">
   <link rel="icon" href="porthon.png" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+  <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+  <script defer src="https://pyscript.net/latest/pyscript.js"></script>
 
 </head>
 
@@ -63,6 +65,24 @@
     <code>
       print("Olá, mundo!")
     </code>
+
+
+    
+  
+    <input id="entrada" type="text">
+    <button onclick="calcular()">Calcular Dobro</button>
+    <p id="resultado"></p>
+    
+    <script>
+      function calcular() {
+        const valor = document.getElementById("entrada").value;
+        const resultado = valor * 2;
+        document.getElementById("resultado").innerText = "O dobro é " + resultado;
+      }
+    </script>
+
+  
+
   </main>
 
     <footer>
@@ -74,6 +94,5 @@
 
     </footer>
     <script src="script.js"></script>
-
 </body>
 </html>
