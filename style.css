@@ -190,7 +190,7 @@ nav li {
     
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
     .hamburguer {
         display: block;               
         top: 1.5vh;                    
@@ -224,6 +224,13 @@ nav li {
     .botao-nav {
         font-size: 2vh;
         white-space: nowrap; /* texto n quebra duas linhas */
+    }
+    h1#theader {
+        font-size: 5.0vh;
+    }
+    .icone.porthon {
+        width: 6vh;
+        height: 6vh;
     }
 }
 
