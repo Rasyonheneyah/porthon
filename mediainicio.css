@@ -5,17 +5,14 @@
     src: url(fontes/Gameplay.ttf);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 829px) {
     .hamburguer {
         display: block;               
-        top: 1.5vh;                    
         right: 1em;                    
         z-index: 1000;                
         position: fixed;
-        top: 1vh;
         right: 1em;
         z-index: 1000;
-        
     }
 
     /** aparecer ao clicar */
@@ -37,12 +34,16 @@
     }
 
     .botao-nav {
-        font-size: 2vh;
         white-space: nowrap; /* texto n quebra duas linhas */
     }
-   
-
-    h1#theader {
-        font-size: 5.0vh;
+}
+@media (max-width: 783px) {
+    h1#theader{
+        font-size: 1.3em;
+    }
+}
+@media (max-width: 600px) {
+    h1#theader{
+        font-size: 1.0em;
     }
 }
