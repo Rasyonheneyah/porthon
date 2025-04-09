@@ -5,17 +5,16 @@
     src: url(fontes/Gameplay.ttf);
 }
 
-@media (max-width: 829px) {
+@media (max-width: 900px) {
     .hamburguer {
         display: block;               
         right: 1em;                    
         z-index: 1000;                
         position: fixed;
-        right: 1em;
-        z-index: 1000;
+
     }
 
-    /** aparecer ao clicar */
+    /* aparecer ao clicar */
     .nav-principal ul {
         display: none;
         flex-direction: column;      /* itens empilhados*/
@@ -37,13 +36,13 @@
         white-space: nowrap; /* texto n quebra duas linhas */
     }
 }
-@media (max-width: 783px) {
+@media (max-width: 700px) {
     h1#theader{
-        font-size: 1.3em;
+        font-size: 40PX;
     }
 }
-@media (max-width: 600px) {
+@media (max-width: 380px) {
     h1#theader{
-        font-size: 1.0em;
+        font-size: 35PX;
     }
 }
