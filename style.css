@@ -26,7 +26,7 @@ header {
     width: 100%;
     position: fixed;
     font-size: 23px;
-    height: 10%;
+    height: 75px;
     top: 0;
     left: 0;
     z-index: 10;
@@ -228,7 +228,10 @@ main > p {
     padding: 0 1em;
     text-align: justify;
 }
+.lista{
+    padding: 0em 0em 1em 4em;
 
+}
 .linksite {
     text-decoration: none;
 }
@@ -270,8 +273,8 @@ code {
     background-color: #5D675B;
     color: #FFFFFF;
     border-radius: 5px;
-    padding: 1em;
-    margin: 2em;
+    padding: 0.5em 1em;
+    margin: 0em 1em;
     overflow-x: auto;
     font-family: 'Courier New', monospace;
     display: block;
@@ -279,6 +282,9 @@ code {
     box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.2);
     font-weight: bold;
     font-size: 20px;
+}
+.nota{
+    font-style: italic; color: #888; margin-top: 10px;
 }
 
 /* --- Rodapé --- */
@@ -314,3 +320,123 @@ footer > a {
     height: 35px;
     margin-right: 10px;
 }
+
+/** Palavras-chave da linguagem, como se, entao, enquanto, fimse, etc */
+.keyword {
+    color: #569cd6;
+}
+  
+/** Nomes de funções criadas pelo usuário, como "calcularArea" */
+.function {
+    color: #dcdcaa;
+}
+  
+/** Variáveis, como numero, resultado, total */
+.variable {
+    color: #9cdcfe;
+}
+  
+/** Strings entre aspas, como "Olá, mundo!" */
+.string {
+    color: #ce9178;
+}
+  
+/** Números inteiros ou decimais, como 10, 3.14 */
+.number {
+    color: #b5cea8;
+}
+  
+/** Comentários no código, como // Isto é um comentário */
+.comment {
+    color: #6a9955;
+    font-style: italic;
+}
+  
+/** Operadores matemáticos e lógicos, como +, -, *, /, =, > */
+.operator {
+    color: #d4d4d4;
+}
+  
+  /** Comandos nativos do Portugol, como escreva, leia */
+.builtin {
+    color: #c586c0;
+}
+
+.comando{
+    margin-left:2.0em;
+}
+
+.comando input {
+    width: 200px;
+    background-color: #333;
+    color: #F08700;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.2em;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    margin-top: 1em;
+}
+  
+.comando button {
+    font-size: 1.2em;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    background-color: #0028ad;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 700;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+  
+.comando button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #001763;
+}
+  
+.comando #resultado {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #F08700;
+}
+  
+.tabela-variaveis {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Courier New', monospace;
+    margin-top: 2em;
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    border: 2px solid #444;
+}
+
+.tabela-variaveis th,
+.tabela-variaveis td {
+    border: 1px solid #444;
+    padding: 0.35em;
+    text-align: left;
+}
+
+.tabela-variaveis thead {
+    background-color: #292929;
+    color: #F08700;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.tabela-variaveis tbody tr:hover {
+    background-color: #2d2d2d;
+}
+
+.tabela-variaveis code {
+    color: #9cdcfe;}
+table code{
+    padding: 0.25em;
+}
+

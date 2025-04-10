@@ -38,7 +38,7 @@
             </ul>
           </li>
           <li>
-            <a class="botao-nav" href="#sobre-nos">
+            <a class="botao-nav" href="sobre-nos.html">
               <span class="material-symbols-outlined">group</span> Sobre Nós
             </a>
           </li>
@@ -48,45 +48,122 @@
   </header> 
 
   <main>
-    <h1>Introdução ao Python</h1>
+    <h1>Aprendendo Python</h1>
+    <h2>O que é Python</h2>
+      <p>
+        Python é uma linguagem de programação conhecida por sua simplicidade, legibilidade e poder expressivo. Criada com o objetivo de tornar o código mais fácil de escrever e entender, sua sintaxe limpa e próxima da linguagem humana torna o processo de aprendizado muito mais intuitivo, sendo ideal tanto para iniciantes quanto para desenvolvedores experientes. Uma das principais características do Python é sua indentação obrigatória, que define blocos de código de forma clara e organizada, promovendo boas práticas desde o início. Além disso, Python é uma linguagem de tipagem dinâmica e forte, ou seja, você não precisa declarar o tipo das variáveis, mas ainda assim o Python realiza verificações rigorosas para evitar erros durante a execução. Essa flexibilidade combinada com uma enorme variedade de bibliotecas e frameworks, torna o Python uma excelente escolha para diversas áreas da tecnologia, desde desenvolvimento web e automação até ciência de dados, inteligência artificial e cibersegurança.
+      </p>
+
+    <h2>Olá Mundo!</h2>
     <p>
-      Python é uma linguagem de programação de alto nível, fácil de aprender e extremamente poderosa. 
-      Com uma sintaxe limpa e uma vasta gama de bibliotecas, é ideal tanto para iniciantes quanto para profissionais.
+      Vamos começar com o famoso <strong>“Olá, mundo!”</strong>, porque existe uma espécie de <em>tradição (ou maldição)</em> no mundo da programação, dizem que quem não começa com o "Olá, mundo!" pode acabar nunca aprendendo programação! Brincadeiras à parte, esse é o primeiro passo ideal para entender como uma linguagem de programação funciona. No <strong>Portugol</strong>, usamos o comando <strong>escreva</strong> para exibir algo na tela. Já no <strong>Python</strong>, usamos <strong>print()</strong>, que é a função responsável por mostrar uma mensagem no terminal. Apesar de parecer algo bem simples, esse é o ponto de partida para qualquer jornada na programação, é quando vemos nosso primeiro código realmente ganhando vida!
+    </p>
+    <p>
+      Para exibir um texto com os comandos <strong>escreva</strong> no Portugol ou <strong>print()</strong> no Python, é importante lembrar que o conteúdo precisa estar entre aspas. Isso porque as aspas indicam que aquilo é uma <strong>string</strong>, ou seja, um texto literal que deve ser mostrado exatamente como está. Então, se você quiser que o programa escreva "Olá, mundo!", deve escrever algo assim: <strong>escreva("Olá, mundo!")</strong> no Portugol ou <strong>print("Olá, mundo!")</strong> no Python.
     </p>
 
-    <h2>Por que aprender Python?</h2>
-    <ul>
-      <li>É fácil de entender e escrever</li>
-      <li>É usada em áreas como ciência de dados, inteligência artificial, automação e web</li>
-      <li>Tem uma comunidade gigantesca</li>
-    </ul>
-
-    <h2>Exemplo de código:</h2>
-    <code>
-      print("Olá, mundo!")
-    </code>
-
-
+  <pre><code>  PORTUGOL
+    <span class="keyword">Algoritmo</span> <span class="string">"olamundo"</span>
+    <span class="comment">// Descrição   : O Programa vai somar duas variáveis</span>
+    <span class="keyword">Var</span>
+    <span class="comment">// Seção de Declarações das variáveis</span>
     
+    <span class="keyword">Inicio</span>
+    <span class="comment">// Seção de Comandos, procedimento, funções, operadores, etc...</span>
+      <span class="builtin">escreva</span>(<span class="string">"Olá mundo!"</span>)
+    <span class="keyword">Fimalgoritmo</span>
   
-    <input id="entrada" type="text">
-    <button onclick="calcular()">Calcular Dobro</button>
-    <p id="resultado"></p>
+  PYTHON 
+    <span class="builtin">print</span>(<span class="string">"Olá Mundo!"</span>)</code>
+</pre>
+<div style="margin: 2em; font-family: Arial, sans-serif;">
+  <label for="mensagem">Digite seu Olá Mundo:</label><br>
+  <input type="text" id="mensagem" placeholder="Escreva aqui..." style="padding: 10px; width: 250px; border-radius: 8px; border: 1px solid #ccc; margin-top: 10px;">
+  <button onclick="mostrarMensagem()" style="padding: 10px 20px; margin-left: 10px; background-color: #0028ad; color: #ffffff; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">escreva / print</button>
+
+  <p id="resultado" style="font-size: 1.2em; margin-top: 20px;"></p>
+</div>
+  <p class="nota"> <strong>Nota:</strong> escreva = imprima </p>
+<script>
+  function mostrarMensagem() {
+    const input = document.getElementById("mensagem").value;
+    const resultado = document.getElementById("resultado");
+    resultado.textContent = input;
+  }
+</script>
     
-    <script>
-      function calcular() {
-        const valor = document.getElementById("entrada").value;
-        const resultado = valor * 2;
-        document.getElementById("resultado").innerText = "O dobro é " + resultado;
-      }
-    </script>
+  <h2>Variáveis</h2>
+  <p>
+    As <strong>variáveis</strong> (var) são como caixinhas que armazenam informações temporárias durante a execução de um programa. Elas têm um nome e guardam um valor que pode mudar com o tempo, por isso o nome "variável". Ao criar uma variável, você está basicamente dizendo: “quero guardar algo aqui com este nome”.
+  </p>
+  <p>
+    Existem diferentes <strong>tipos de variáveis</strong>, e cada tipo define o tipo de dado que aquela caixinha pode guardar. Veja a tabela:
+
+    <table class="tabela-variaveis">
+    <thead>
+      <tr>
+        <th>Tipo</th>
+        <th>Descrição</th>
+        <th>Portugol</th>
+        <th>Python</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Inteiro</td>
+        <td>Números sem parte decimal</td>
+        <td>
+          <code><span class="variable">idade</span>: <span class="keyword">inteiro</span></code><br>
+          <code><span class="variable">idade</span> &lt;- <span class="number">20</span></code>
+        </td>
+        <td>
+          <code><span class="variable">idade</span> = <span class="number">20</span></code>
+        </td>
+      </tr>
+      <tr>
+        <td>Real / Float</td>
+        <td>Números com casas decimais</td>
+        <td>
+          <code><span class="variable">altura</span>: <span class="keyword">real</span></code><br>
+          <code><span class="variable">altura</span> &lt;- <span class="number">1.75</span></code>
+        </td>
+        <td>
+          <code><span class="variable">altura</span> = <span class="number">1.75</span></code>
+        </td>
+      </tr>
+      <tr>
+        <td>Texto (String)</td>
+        <td>Sequência de caracteres</td>
+        <td>
+          <code><span class="variable">nome</span>: <span class="keyword">caractere</span></code><br>
+          <code><span class="variable">nome</span> &lt;- <span class="string">"Maria"</span></code>
+        </td>
+        <td>
+          <code><span class="variable">nome</span> = <span class="string">"Maria"</span></code>
+        </td>
+      </tr>
+      <tr>
+        <td>Lógico (Booleano)</td>
+        <td>Verdadeiro ou falso</td>
+        <td>
+          <code><span class="variable">resposta</span>: <span class="keyword">logico</span></code><br>
+          <code><span class="variable">resposta</span> &lt;- <span class="keyword">verdadeiro</span></code>
+        </td>
+        <td>
+          <code><span class="variable">resposta</span> = <span class="keyword">True</span></code>ou<code><span class="variable">resposta</span> = <span class="keyword">False</span></code>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  
+    
 
   
 
   </main>
 
     <footer>
-        
     <div style="display: flex; justify-content: center; align-items: center; height: 10em;">
         <a target="_blank" rel="external" href="https://github.com/Rasyonheneyah"><img class="circular" src="autor.png" alt="Ícone do autor"></a>
         <p> Site construído pelo Misael</p>

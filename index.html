@@ -14,7 +14,7 @@
     <header>
         <div class="brand">
           <span class="icone porthon"></span> 
-          <h1 id="theader">Porthon </h1>
+          <h1 id="theader">Porthon</h1>
         </div>
       
         <div class="menu">
@@ -26,8 +26,8 @@
                   <span class="material-symbols-outlined">home</span> Início
                 </a>
               </li>
-                            <li class="dropdown">
-                <a class="botao-nav" href="#"><span class="material-symbols-outlined">terminal</span> Linguagens </a>
+              <li class="dropdown">
+                <a  class="botao-nav" href="#"><span class="material-symbols-outlined">terminal</span> Linguagens </a>
                 <ul class="submenu">
                   <li>
                     <a class="botao-nav submenu-item python" href="python.html">Python</a>
@@ -35,7 +35,7 @@
                 </ul>
               </li>
               <li>
-                <a class="botao-nav" href="#sobre-nos">
+                <a class="botao-nav" href="sobre-nos.html">
                   <span class="material-symbols-outlined">group</span>Sobre Nós
                 </a>
               </li>
@@ -65,21 +65,85 @@
                     <ol type="1">
                       
                         <li><b>Não arbitrariedade:</b> o novo conhecimento não pode ser aleatório, ele deve se conectar logicamente com o que o aluno já sabe.</li>
-                        
+
                         <li><b>Substantividade:</b> o conteúdo precisa ter sentido psicológico para o aluno, ou seja, deve ser relevante e compreensível para ele.</li>
-                    </ul>
-            <pre>
-                <code>
-                    for i in range(5):
-                        a=input('Insira:')
-                        a=a+a
-                </code>
-            </pre>
-            <div class="imagem-container">
-              <img src="python.png" alt="Descrição da imagem">
-              <p>Bike!</p>
-          </div>
-        
+                    </ol>
+                    <p>Quando à Substantividade, se você escolheu e deseja aprender programação, então o conteúdo ja lhe é relevante em certo nível. O professor pode também buscar meios de tornar a aula mais interessante. Já sobre a Não Arbitrariedade, é justamente aí que o Português Estruturado atua, pois nossas mentes no início podem sofrer dificuldade em compreender as  linguagens de programação, principalmente quem não estuda inglês, por isso o Portugol é uma ferramenta eficiente para se ensinar lógica de programação para quem compreende a língua portuguesa, porque os comandos são efetuados em nosso idioma nativo.   </p>
+                    
+                    <h2>Algorítimos</h2>
+                    <h3>O que é?</h3>
+                    <p>Algorítimos basicamente são passos ou instruções bem definidos que são seguidos para resolver um problema ou realizar alguma tarefa. Não precisam ser feitos necessariamente em um computador. Um bom exemplo é uma receita de bolo: você precisa seguir determinada ordem de passos, esses passos possuem um propósito, e no final você chega onde desejava alcançar.</p>
+                    <p>Exemplo simples de um algorítimo:</p>
+                <ol class="lista" type="1">
+                    <li>Pegue um primeiro número</li>
+                    <li>Pegue um segundo número</li>
+                    <li>Some o primeiro número com o segundo número</li>
+                    <li>Mostre o resultado da soma</li>
+                </ol>
+                    <p>Um exemplo de como seria em portugol:</p>
+    <pre>
+    <code>
+      <span class="keyword">Algoritmo</span> <span class="string">"soma2variaveis"</span>
+      <span class="comment">// Descrição   : O Programa vai somar duas váriáveis</span>
+      
+      <span class="keyword">Var</span>
+      <span class="comment">// Seção de Declarações das variáveis</span>
+         <span class="variable">a</span>, <span class="variable">b</span>, <span class="variable">resultado</span> :<span class="keyword">inteiro</span>
+      
+      <span class="keyword">Inicio</span>
+      <span class="comment">// Seção de Comandos, procedimento, funções, operadores, etc...</span>
+         <span class="builtin">leia</span>(<span class="variable">a</span>)
+         <span class="builtin">leia</span>(<span class="variable">b</span>)
+         <span class="variable">resultado</span> <span class="operator">&lt;-</span> <span class="variable">a</span><span class="operator">+</span><span class="variable">b</span>
+         <span class="builtin">escreva</span>(<span class="string">"O resultado é "</span>, <span class="variable">resultado</span>)
+      
+      <span class="keyword">Fimalgoritmo</span>
+    </code>
+    </pre>
+    <p>Na prática esse comando faz:</p>
+    <div class="comando">
+      <input type="number" id="entrada" placeholder="Leia A">
+      <button onclick="proximoValor()">leia</button>
+      <div id="resultado"></div>
+    </div>
+  
+    <script>
+      let etapa = 1;
+      let a = 0, b = 0;
+  
+      function proximoValor() {
+        const entrada = document.getElementById("entrada");
+        const valor = entrada.value;
+  
+        if (!/^[-]?\d+$/.test(valor.trim())) {
+          entrada.value = "";
+          entrada.placeholder = "número inteiro";
+          return;
+        }
+  
+        if (etapa === 1) {
+          a = parseInt(valor, 10);
+          etapa = 2;
+          entrada.value = "";
+          entrada.placeholder = "Leia B";
+          document.getElementById("resultado").textContent = "";
+        } else if (etapa === 2) {
+          b = parseInt(valor, 10);
+          const resultado = a + b;
+          document.getElementById("resultado").textContent = "O resultado é: " + resultado;
+          etapa = 1;
+          entrada.value = "";
+          entrada.placeholder = "Leia A";
+        }
+      }
+    </script>
+
+              <h2>Linguagens</h2>      
+                <p>
+                  Para acessar o conteúdo relacionado a linguagens de programação, com foco em construir uma ponte entre o pensamento lógico do Portugol e linguagens como Python, clique na aba de linguagens no cabeçalho. Lá, você encontrará explicações e exemplos que mostram como estruturas comuns do Portugol, comparada com estruturas do Python. Essa conexão facilita a transição do aprendizado introdutório para aplicações reais no mundo da programação.
+                </p>
+                
+            
     </main>
 
     <footer>
