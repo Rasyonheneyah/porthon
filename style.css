@@ -215,18 +215,21 @@ h2 {
     font-size: clamp(1.5rem, 4vw, 3em);    
     color: #0028ad;
     text-indent: 0.5em;
+    margin: 0.5em;
 }
 
 h3 {
     font-size: clamp(1.2rem, 3.5vw, 2.5em);    
     color: #1789FC;
     text-indent: 0.6em;
+    margin: 0.25em;
 }
 
 main > p {
     text-indent: 3em;
     padding: 0 1em;
     text-align: justify;
+    margin: 0;
 }
 .lista{
     padding: 0em 0em 1em 4em;
@@ -270,7 +273,7 @@ main > p {
 
 /* --- Código --- */
 code {
-    background-color: #5D675B;
+    background: linear-gradient(90deg, #5A6459, #5D675B, #606A5E, #5D675B, #5A6459);
     color: #FFFFFF;
     border-radius: 5px;
     padding: 0.5em 1em;
@@ -281,7 +284,7 @@ code {
     max-width: 100%;
     box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.2);
     font-weight: bold;
-    font-size: 20px;
+    font-size: 22px;
 }
 .nota{
     font-style: italic; color: #888; margin-top: 10px;
@@ -404,6 +407,7 @@ footer > a {
     font-size: 1.5em;
     margin-top: 20px;
     color: #F08700;
+    
 }
   
 .tabela-variaveis {
@@ -414,6 +418,7 @@ footer > a {
     background-color: #1e1e1e;
     color: #f0f0f0;
     border: 2px solid #444;
+    font-size: 18px;
 }
 
 .tabela-variaveis th,
@@ -427,7 +432,7 @@ footer > a {
     background-color: #292929;
     color: #F08700;
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: 1.3em;
 }
 
 .tabela-variaveis tbody tr:hover {
@@ -440,3 +445,7 @@ table code{
     padding: 0.25em;
 }
 
+table{
+    margin-bottom: 1em;
+    margin-left: 0.25em;
+}

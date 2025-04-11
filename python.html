@@ -62,7 +62,7 @@
       Para exibir um texto com os comandos <strong>escreva</strong> no Portugol ou <strong>print()</strong> no Python, é importante lembrar que o conteúdo precisa estar entre aspas. Isso porque as aspas indicam que aquilo é uma <strong>string</strong>, ou seja, um texto literal que deve ser mostrado exatamente como está. Então, se você quiser que o programa escreva "Olá, mundo!", deve escrever algo assim: <strong>escreva("Olá, mundo!")</strong> no Portugol ou <strong>print("Olá, mundo!")</strong> no Python.
     </p>
 
-  <pre><code>  PORTUGOL
+  <pre><code> PORTUGOL
     <span class="keyword">Algoritmo</span> <span class="string">"olamundo"</span>
     <span class="comment">// Descrição   : O Programa vai somar duas variáveis</span>
     <span class="keyword">Var</span>
@@ -73,10 +73,10 @@
       <span class="builtin">escreva</span>(<span class="string">"Olá mundo!"</span>)
     <span class="keyword">Fimalgoritmo</span>
   
-  PYTHON 
+ PYTHON 
     <span class="builtin">print</span>(<span class="string">"Olá Mundo!"</span>)</code>
 </pre>
-<div style="margin: 2em; font-family: Arial, sans-serif;">
+<div class="comando">
   <label for="mensagem">Digite seu Olá Mundo:</label><br>
   <input type="text" id="mensagem" placeholder="Escreva aqui..." style="padding: 10px; width: 250px; border-radius: 8px; border: 1px solid #ccc; margin-top: 10px;">
   <button onclick="mostrarMensagem()" style="padding: 10px 20px; margin-left: 10px; background-color: #0028ad; color: #ffffff; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">escreva / print</button>
@@ -96,6 +96,12 @@
   <p>
     As <strong>variáveis</strong> (var) são como caixinhas que armazenam informações temporárias durante a execução de um programa. Elas têm um nome e guardam um valor que pode mudar com o tempo, por isso o nome "variável". Ao criar uma variável, você está basicamente dizendo: “quero guardar algo aqui com este nome”.
   </p>
+  <p>
+    Ao criar variáveis, é importante lembrar de algumas regras: o nome da variável <strong>não pode começar com números</strong>, <strong>não pode conter espaços</strong> e <strong>não pode usar caracteres especiais</strong> como @, %, ! ou acentos. Além disso, <strong>não se deve usar palavras reservadas da linguagem</strong>, como <em>if</em>, <em>while</em> ou <em>print</em>. O ideal é usar nomes claros e significativos, começando com letras e, se necessário, utilizando o caractere underline (<strong>_</strong>) para separar palavras. O padrão é criar o nome das variáveis utilizando caixa baixa.
+    <br>
+    <strong>Exs.:</strong> idade, nome_completo, quantidade, mediaAluno, _resultado. 
+  </p>
+  
   <p>
     Existem diferentes <strong>tipos de variáveis</strong>, e cada tipo define o tipo de dado que aquela caixinha pode guardar. Veja a tabela:
 
@@ -155,13 +161,226 @@
       </tr>
     </tbody>
   </table>
+  <p class="nota">Nota: Você pode usar '<span class="builtin">type</span><span class="string">(</span><span class="variable">variavel</span><span class="string">)</span>' em python que aparecera o tipo de váriavel que ela é. </p>
 
+  <h3>Atribuições</h3>
+    <p>
+      A atribuição é o ato de guardar um valor dentro de uma variável.
+      Em Portugol, usamos o operador <strong>&lt;-</strong>. Já em Python, usamos o símbolo <strong>=</strong>.
+      <br>
+      Exemplo em Portugol: <strong>idade &lt;- 18</strong>
+      <br>
+      Exemplo em Python: <strong>idade = 18</strong>
+    </p>
   
+    <h3>Operadores Aritméticos</h3>
+    <p>
+      Usados para realizar cálculos matemáticos.
+      As duas linguagens usam os mesmos símbolos para as operações básicas:
+      <strong>+</strong> (soma),
+      <strong>-</strong> (subtração),
+      <strong>*</strong> (multiplicação),
+      <strong>/</strong> (divisão).
+   <br>
+      Para potência, a diferença está na sintaxe:
+      <br>
+      Portugol: <strong>potência(a, b)</strong>
+      <br>
+      Python: <strong>a ** b</strong>
+    </p>
+  
+    <h3>Operadores Lógicos</h3>
+    <p>
+      Servem para combinar condições (verdadeiro ou falso).
+      <br>
+      Portugol: <strong>e</strong>, <strong>ou</strong>, <strong>nao</strong>
+      <br>
+      Python: <strong>and</strong>, <strong>or</strong>, <strong>not</strong>
+    </p>
+  
+    <h3>Operadores Relacionais</h3>
+    <p>
+      Usados para comparar valores. O resultado é sempre verdadeiro ou falso.
+    </p>
+  
+    <table>
+      <thead>
+        <tr>
+          <th>Significado</th>
+          <th>Portugol</th>
+          <th>Python</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Igual</td>
+          <td>=</td>
+          <td>==</td>
+        </tr>
+        <tr>
+          <td>Diferente</td>
+          <td>&lt;&gt;</td>
+          <td>!=</td>
+        </tr>
+        <tr>
+          <td>Maior</td>
+          <td>&gt;</td>
+          <td>&gt;</td>
+        </tr>
+        <tr>
+          <td>Menor</td>
+          <td>&lt;</td>
+          <td>&lt;</td>
+        </tr>
+        <tr>
+          <td>Maior ou igual</td>
+          <td>&gt;=</td>
+          <td>&gt;=</td>
+        </tr>
+        <tr>
+          <td>Menor ou igual</td>
+          <td>&lt;=</td>
+          <td>&lt;=</td>
+        </tr>
+      </tbody>
+    </table>
     
 
-  
+    <h2>Input (leia) e Print (escreva)</h2>
+    <p>
+      Para que um programa interaja com o usuário, ele precisa ser capaz de receber informações e exibir resultados. É aí que entram dois comandos fundamentais: <strong>entrada</strong> e <strong>saída de dados</strong>.
+    </p>
+    <p>
+      Em <strong>Python</strong>, usamos o comando <strong>input()</strong> para solicitar uma informação do usuário. Já para mostrar uma mensagem ou resultado na tela, usamos <strong>print()</strong>. Por exemplo, <em>input("Digite seu nome: ")</em> pede que o usuário digite algo, e <em>print("Olá!")</em> exibe a mensagem "Olá!" no terminal.
+    </p>
+    <p>
+      Um ponto importante é que o <strong>input()</strong> sempre retorna um texto (string), mesmo que o usuário digite um número. Por isso, se você quiser trabalhar com valores numéricos, precisa converter o valor digitado usando as funções <strong>int()</strong> para inteiros ou <strong>float()</strong> para números decimais. Exemplo: <em>idade = int(input("Digite sua idade: "))</em>.
+    </p>
+    <p>
+      No <strong>Portugol</strong>, esses comandos têm nomes mais próximos da linguagem natural: usamos <strong>leia</strong> para capturar o que o usuário digita e <strong>escreva</strong> para exibir algo na tela. Por exemplo: <em>leia(nome)</em> e <em>escreva("Olá!")</em>.
+    </p>
+    <p>
+      Esses comandos são a base de qualquer algoritmo que precisa se comunicar com quem está utilizando o programa. Dominar bem entrada e saída é essencial para criar aplicações mais dinâmicas e interativas!
+    </p>
+    
+    <pre><code> PORTUGOL
+    <span class="keyword">Algoritmo</span> <span class="string">"OlaNome"</span>
+    <span class="keyword">Var</span>
+      <span class="variable">nome</span> : <span class="keyword">caractere</span>
+      <span class="variable">idade</span> : <span class="keyword">inteiro</span>
+    <span class="keyword">Inicio</span>
+      <span class="builtin">escreva</span>(<span class="string">"Digite um nome: "</span>)
+      <span class="builtin">leia</span>(<span class="variable">nome</span>)
+      <span class="builtin">escreva</span>(<span class="string">"Digite sua idade:"</span>)
+      <span class="builtin">leia</span>(<span class="variable">idade</span>)
+      <span class="builtin">escreva</span>(<span class="string">"Olá "</span>, <span class="variable">nome</span>, <span class="string">"! Você tem "</span>, <span class="variable">idade</span>, <span class="string">" anos."</span>)
+    <span class="keyword">Fimalgoritmo</span>
+ PYTHON
+      <span class="variable">nome</span> = <span class="builtin">input</span>(<span class="string">"Digite seu nome: "</span>)
+      <span class="variable">idade</span> = <span class="builtin">int</span>(<span class="builtin">input</span>(<span class="string">"Digite sua idade: "</span>))
+      <span class="builtin">print</span>(<span class="string">"Olá, "</span>, <span class="variable">nome</span>, <span class="string">"! Você tem "</span>, <span class="variable">idade</span>, <span class="string">" anos."</span>)
+      </code></pre>
+      <p style="margin-bottom: 1em;" class="nota">Nota: O comando "escreval" em portugol faz o algortímo escrever na linha debaixo da última linha que teve algo escrito.</p>
+      
+      <p>
+        Este algoritmo, tanto na versão em Portugol quanto em Python, tem como objetivo interagir com o usuário solicitando duas informações: o nome e a idade. Primeiro, ele pede que o usuário digite seu nome e, em seguida, sua idade. Depois que essas informações são fornecidas, o programa exibe uma mensagem de saudação personalizada, informando o nome da pessoa e sua idade. Este exemplo simples é muito útil para aprender como funciona a entrada (leitura) e a saída (exibição) de dados, além de introduzir o uso de variáveis e tipos de dados básicos como texto (caractere) e número inteiro.
+      </p>
+      
+      
+      
+      <h2>If Else / Se Senão </h2>
+      <p> O comando <strong>if</strong> é uma das estruturas mais importantes na programação, tanto em Python quanto em Portugol. Ele permite que o programa tome decisões com base em condições. Em outras palavras, é como dizer ao computador: <em>“Se isso acontecer, faça isso; caso contrário, faça outra coisa.”</em> </p> <p> Essa lógica condicional é usada em praticamente todos os programas que você já usou, desde jogos até aplicativos de celular. Com o if, podemos controlar o fluxo do código e criar comportamentos inteligentes que se adaptam às escolhas ou dados fornecidos pelo usuário. </p> <p> No Python, usamos if e else para montar essas decisões. Já no Portugol (como no Visualg), usamos se, senao e fimse com a mesma finalidade. Aprender essas estruturas é o primeiro passo para criar programas interativos e dinâmicos! </p>
+  <pre><code> PORTUGOL
+    <span class="keyword">Algoritmo</span> <span class="string">"VerificaIdade"</span>
+    <span class="keyword">Var</span>
+    <span class="comment">||</span><span class="variable">idade</span> : <span class="keyword">inteiro</span>
+    <span class="keyword">Inicio</span>
+    <span class="comment">||</span><span class="builtin">escreva</span>(<span class="string">"Digite sua idade: "</span>)  
+    <span class="comment">||</span><span class="builtin">leia</span>(<span class="variable">idade</span>)  
+    <span class="comment">||</span><span class="keyword">se</span> <span class="variable">idade</span> <span class="operator">&gt;=</span> <span class="number">18</span> <span class="keyword">entao</span>  
+    <span class="comment">||||</span><span class="builtin">escreva</span>(<span class="string">"Você é maior de idade."</span>)  
+    <span class="comment">||</span><span class="keyword">senao</span>  
+    <span class="comment">||||</span><span class="builtin">escreva</span>(<span class="string">"Você é menor de idade."</span>)
+    <span class="comment">||</span><span class="keyword">fimse</span>
+    <span class="keyword">Fimalgoritmo</span>
 
-  </main>
+ PYTHON
+    <span class="variable">idade</span> <span class="operator">=</span> <span class="builtin">int</span>(<span class="builtin">input</span>(<span class="string">"Digite sua idade: "</span>))  
+    <span class="keyword">if</span> <span class="variable">idade</span> <span class="operator">&gt;=</span> <span class="number">18</span>:  
+    <span class="comment">||</span><span class="builtin">print</span>(<span class="string">"Você é maior de idade."</span>)  
+    <span class="keyword">else</span>:  
+    <span class="comment">||</span><span class="builtin">print</span>(<span class="string">"Você é menor de idade."</span>) 
+
+<span class="comment"> || -&gt; Indentação </span>
+</code></pre>
+  <p><p>O código tem como objetivo verificar a idade da pessoa. Primeiro, o programa solicita que o usuário digite sua idade. Em seguida, ele verifica se esse número é maior ou igual a 18. Caso seja, exibe a mensagem "Você é maior de idade." Caso contrário, mostra "Você é menor de idade."</p>
+  <h3>Indentação</h3>
+  <p>Nsse exemplo aparece a importância da <strong>indentação</strong>. A indentação é o recuo feito nas linhas de código que pertencem a um mesmo bloco, representado no exemplo por '<span class="comment"> || </span>', como os comandos que estão dentro de um <em>if</em> ou <em>else</em>. No Portugol, ela ajuda na organização visual. Já no Python, a indentação é obrigatória, pois ela define quais comandos estão dentro do bloco condicional. Sem indentação correta, o código em Python pode gerar erro e não funcionar corretamente.</p>
+  </p>
+      
+
+        
+        <h2>While / enquanto</h2>
+        <p>O comando <strong>while</strong> é utilizado quando queremos que um trecho de código seja repetido várias vezes, <strong>enquanto uma condição for verdadeira</strong>. Ele é muito útil quando não sabemos exatamente quantas vezes a repetição deve ocorrer, pois ela depende de algo que acontece durante a execução.</p> <p>Antes de cada repetição, a condição é verificada. Se for verdadeira, o bloco de comandos dentro do while é executado. Quando a condição se tornar falsa, a repetição termina.</p> <p>Veja o exemplo a seguir, onde um número é impresso na tela enquanto ele for menor ou igual a 5:
+
+        </p> 
+<pre><code> PORTUGOL
+    <span class="keyword">Algoritmo</span> <span class="string">"Contador"</span>
+    <span class="keyword">Var</span>
+      <span class="variable">contador</span> : <span class="keyword">inteiro</span>
+    <span class="keyword">Inicio</span>
+      <span class="variable">contador</span> &lt;- <span class="number">1</span>
+      <span class="keyword">enquanto</span> <span class="variable">contador</span> &lt;= <span class="number">5</span> <span class="keyword">faca</span>
+        &nbsp;&nbsp;<span class="builtin">escreva</span>(<span class="string">"Contador: "</span><span class="operator">,</span> <span class="variable">contador</span>)
+        &nbsp;&nbsp;<span class="variable">contador</span> &lt;- <span class="variable">contador</span> + <span class="number">1</span>
+      <span class="keyword">fimenquanto</span>
+    <span class="keyword">Fimalgoritmo</span>
+  
+ PYTHON
+    <span class="variable">contador</span> = <span class="number">1</span>
+    <span class="keyword">while</span> <span class="variable">contador</span> &lt;= <span class="number">5</span>:
+      <span></span>&nbsp;&nbsp;<span class="builtin">print</span>(<span class="string">"Contador:"</span>, <span class="variable">contador</span>)
+      &nbsp;&nbsp;<span class="variable">contador</span> = <span class="variable">contador</span> + <span class="number">1</span>
+</code></pre>
+
+        <p>Nesse exemplo, tanto em Python quanto em Portugol, o programa irá mostrar os números de 1 a 5 na tela, um por um. O valor de contador vai sendo atualizado dentro do loop até que a condição deixe de ser verdadeira.</p>
+
+      <h2>For </h2>
+      <p>O comando <strong>for</strong> é utilizado para repetir uma ação várias vezes. Em <strong>Python</strong>, ele percorre uma sequência de valores automaticamente. Já no <strong>Portugol</strong>, o laço <strong>para</strong> é usado para repetir uma instrução enquanto o valor estiver dentro de um intervalo definido. Ele é útil para contar ou repetir algo um número conhecido de vezes. <p>
+        O comando <strong>for</strong> serve para repetir um bloco de instruções um número determinado de vezes. 
+        No <strong>Portugol</strong>, usamos a estrutura <em>para ... ate ... faca</em>, onde definimos a variável de controle, o valor inicial e o final. 
+        Já no <strong>Python</strong>, usamos <em>for variavel in range(inicio, fim):</em>, sendo que o valor de fim não é incluído.
+        </p>
+        </p>
+
+<pre><code> PORTUGOL
+    <span class="keyword">Algoritmo</span> <span class="string">"ExemploPara"</span>
+    <span class="keyword">Var</span>
+      <span class="variable">i</span> : <span class="keyword">inteiro</span>
+    <span class="keyword">Inicio</span>
+      <span class="keyword">para</span> <span class="variable">i</span> &lt;- 1 <span class="keyword">ate</span> 5 <span class="keyword">faca</span>
+        <span class="builtin">escreval</span>(<span class="string">"Valor de i: ", </span><span class="variable">i</span>)
+      <span class="keyword">fimpara</span>
+    <span class="keyword">Fimalgoritmo</span>
+  
+ PYTHON
+    <span class="variable">i</span> <span class="operator">=</span> 0
+    <span class="keyword">for</span> <span class="variable">i</span> <span class="keyword">in</span> <span class="builtin">range</span>(<span class="string">1, 6</span>):
+      <span class="builtin">print</span>(<span class="string">"Valor de i:", </span><span class="variable">i</span>)
+</code></pre>
+<p>
+  O comando <strong>for</strong> é utilizado para repetir um bloco de código várias vezes. <br>
+  No <strong>Portugol</strong>, usamos <strong>para</strong> com um valor inicial e final, como no exemplo em que <strong>i</strong> vai de 1 até 5. <br>
+  Já no <strong>Python</strong>, usamos a função <strong>range</strong>, que começa do <strong>zero</strong> por padrão. No exemplo, usamos <strong>range(1, 6)</strong>, pois o número final (6) não é incluído, então o loop vai de 1 até 5. <br>
+  É importante lembrar que em Python o <strong>range(x, y)</strong> inclui o x, mas não inclui o y. Se usassemos <strong>for i range(5)</strong>, você faria o <strong>i</strong> pegar esses valores <em>{0,1,2,3,4,5}</em> em cada repetição do for.
+</p>
+
+
+
+
+    </main>
+
+
 
     <footer>
     <div style="display: flex; justify-content: center; align-items: center; height: 10em;">
