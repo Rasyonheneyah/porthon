@@ -284,8 +284,9 @@ code {
     max-width: 100%;
     box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.2);
     font-weight: bold;
-    font-size: 22px;
+    font-size: clamp(1rem, 2vw, 2em)
 }
+
 .nota{
     font-style: italic; color: #888; margin-top: 10px;
 }
@@ -355,11 +356,6 @@ footer > a {
     font-style: italic;
 }
   
-/** Operadores matemáticos e lógicos, como +, -, *, /, =, > */
-.operator {
-    color: #d4d4d4;
-}
-  
   /** Comandos nativos do Portugol, como escreva, leia */
 .builtin {
     color: #c586c0;
@@ -375,7 +371,7 @@ footer > a {
     color: #F08700;
     text-align: center;
     font-weight: 700;
-    font-size: 1.2em;
+    font-size: clamp(1rem, 1vw, 1em);
     padding: 10px;
     margin: 10px;
     border: none;
@@ -385,7 +381,7 @@ footer > a {
 }
   
 .comando button {
-    font-size: 1.2em;
+    font-size: clamp(1rem, 1vw, 1em);
     padding: 10px;
     margin: 10px;
     border: none;
@@ -404,7 +400,7 @@ footer > a {
 }
   
 .comando #resultado {
-    font-size: 1.5em;
+    font-size: clamp(1rem, 1vw, 2em);
     margin-top: 20px;
     color: #F08700;
     
@@ -418,7 +414,8 @@ footer > a {
     background-color: #1e1e1e;
     color: #f0f0f0;
     border: 2px solid #444;
-    font-size: 18px;
+    font-size: clamp(1rem, 1.5vw, 1em);
+
 }
 
 .tabela-variaveis th,
